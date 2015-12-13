@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <title>Task List App</title>
+</head>
+<body>
+  <div class="container" ng-controller="AppCtrl">
+    <h1>Task List App</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Task Name</th>         
+          <th>Start Date</th>
+          <th>Expected End Date</th>
+		  <th>Status</th>
+          <th>Action</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input class="form-control" ng-model="task.name"></td>
+          <td><input class="form-control" ng-model="task.sdate"></td>
+          <td><input class="form-control" ng-model="task.edate"></td>
+		  <td><input class="form-control" ng-model="task.status"></td>
+          <td><button class="btn btn-primary" ng-click="addTask()">Add Contact</button></td>
+          <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+        </tr>
+        <tr ng-repeat="task in tasklist">
+          <td>{{task.name}}</td>
+          <td>{{task.sdate}}</td>
+          <td>{{task.edate}}</td>
+		  <td>{{task.status}}</td>
+          <td><button class="btn btn-danger" ng-click="remove(task._id)">Remove</button></td>
+          <td><button class="btn btn-warning" ng-click="edit(task._id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>

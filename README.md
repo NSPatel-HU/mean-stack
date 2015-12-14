@@ -12,7 +12,7 @@ This repo contains the code for a Task List App that was built using the MEAN st
 
 Simply clone this repo using 
 
-    git clone git@github.com:nspatel-hu/mean-stack.git
+    git clone git@github.com:NSPatel-HU/mean-stack.git
 
 then install the Node modules with
 

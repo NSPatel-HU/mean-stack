@@ -1,10 +1,10 @@
 <!DOCTYPE>
 <html ng-app="myApp">
 <head>
-<!-- Latest compiled and minified CSS -->
+<!-- Compiled and minified Bootstrap CSS Support -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-<!-- Optional theme -->
+<!-- Optional Bootstrap-theme Support -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
   <title>Task List App</title>
@@ -29,7 +29,6 @@
           <td><input class="form-control" ng-model="task.name"></td>
           <td><input class="form-control" ng-model="task.sdate"></td>
           <td><input class="form-control" ng-model="task.edate"></td>
-		  <td><input class="form-control" ng-model="task.status"></td>
           <td><button class="btn btn-primary" ng-click="addTask()">Add Contact</button></td>
           <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
         </tr>
@@ -37,7 +36,6 @@
           <td>{{task.name}}</td>
           <td>{{task.sdate}}</td>
           <td>{{task.edate}}</td>
-		  <td>{{task.status}}</td>
           <td><button class="btn btn-danger" ng-click="remove(task._id)">Remove</button></td>
           <td><button class="btn btn-warning" ng-click="edit(task._id)">Edit</button></td>
         </tr>
